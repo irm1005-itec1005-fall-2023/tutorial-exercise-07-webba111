@@ -1,0 +1,54 @@
+/*
+ * CSS File for the solution
+ * Tutorial 07
+ * Step 02
+ */
+
+/* Add your CSS here */
+
+
+
+
+
+
+
+/*
+  CORE PAGE CSS - DO NOT MODIFY
+*/
+
+body {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cce3de;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  padding: 2rem;
+  width: 90%;
+  background-color: #3c544a;
+  border-radius: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #cce3de;
+  margin-bottom: 2rem;
+}
+
+/****** Screen reader text utility clsas *******/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

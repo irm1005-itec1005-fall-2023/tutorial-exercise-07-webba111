@@ -1,0 +1,277 @@
+/*
+ * CSS File for the solution
+ * Tutorial 07
+ * Step 01
+ */
+
+
+/*
+
+TASK 1
+
+*/
+
+.grid-container-task-1 {
+  display: grid;
+
+  /* Use grid-template-columns to set four equal width columns */
+  grid-template-columns: repeat(4, 1fr);
+
+  /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
+  gap: 2rem;
+}
+
+/*
+
+  TASK 2
+
+  */
+
+.grid-container-task-2 {
+  display: grid;
+
+  /* Use grid-template-columns to set four equal width columns */
+  grid-template-columns: repeat(4, 1fr);
+
+  /* Use grid-template-rows to set two rows each with an equal height */
+  grid-template-rows: repeat(2, 1fr);
+
+  /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
+  gap: 2rem;
+}
+
+.grid-container-task-2 .item-1 {
+  /* Add a grid-row-start to have this item start at the top most row line */
+  grid-row-start: 1;
+  /*
+    Add a grid-row-end to have the item start at the last row line
+    HINT: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end
+  */
+  grid-row-end: -1;
+}
+
+.grid-container-task-2 .item-2 {
+  grid-column-start: 3;
+  grid-column-end: -1;
+  grid-row-start: 2;
+}
+
+/*
+
+  TASK 3
+
+*/
+
+.grid-container-task-3 {
+  display: grid;
+
+  /* Use grid-template-columns to set four equal width columns */
+  grid-template-columns: repeat(4, 1fr);
+
+  /* Use grid-template-rows to set four rows each with an equal height */
+  grid-template-rows: repeat(4, 1fr);
+
+  /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
+  gap: 2rem;
+}
+
+.grid-container-task-3 .item-1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.grid-container-task-3 .item-2 {
+  grid-column-start: 4;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+
+.grid-container-task-3 .item-3 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.grid-container-task-3 .item-4 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.grid-container-task-3 .item-5 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-end: -1;
+}
+
+/*
+
+  TASK 4
+
+*/
+
+.grid-container-task-4 {
+  display: grid;
+
+  /* Use grid-template-columns to set four equal width columns */
+  grid-template-columns: 2rem 1fr 1fr 1fr 1fr 2rem;
+
+  /* Use grid-template-rows to set two rows each with an equal height */
+  grid-template-rows: repeat(3, 1fr);
+
+  /* Use grid-template-areas to name the different sections */
+  grid-template-areas:
+    "header header header header header header"
+    ".       main    main    main    side    ."
+    "footer  footer  footer  footer  footer  footer";
+
+  /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
+  gap: 2rem;
+}
+
+.grid-container-task-4 .header {
+  grid-area: header;
+}
+
+.grid-container-task-4 .main {
+  grid-area: main;
+}
+
+.grid-container-task-4 .side {
+  grid-area: side;
+}
+
+.grid-container-task-4 .footer {
+  grid-area: footer;
+}
+
+/*
+
+  TASK 5
+
+*/
+
+.grid-container-task-5 {
+  display: grid;
+
+  /* Use grid-template-columns to set eight 8 equal width columns */
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.grid-container-task-5 .item-1 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+
+.grid-container-task-5 .item-2 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.grid-container-task-5 .item-3 {
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+
+.grid-container-task-5 .item-4 {
+  grid-column-start: 4;
+  grid-row-start: 4;
+}
+
+.grid-container-task-5 .item-5 {
+  grid-column-start: 5;
+  grid-row-start: 5;
+}
+
+.grid-container-task-5 .item-6 {
+  grid-column-start: 6;
+  grid-row-start: 6;
+}
+
+.grid-container-task-5 .item-7 {
+  grid-column-start: 7;
+  grid-row-start: 7;
+}
+
+.grid-container-task-5 .item-8 {
+  grid-column-start: 8;
+  grid-row-start: 8;
+}
+
+/*
+  AUXILARY CSS FOR THE GRID CONTAINERS AND CHILDREN - DO NOT MODIFY
+*/
+
+.grid-container-task-1 > li,
+.grid-container-task-2 > li,
+.grid-container-task-3 > li,
+.grid-container-task-4 > li,
+.grid-container-task-5 > li {
+  padding: 20px;
+  background-color: #cce3de;
+  border: 2px solid #577769;
+}
+
+/*
+  CORE PAGE CSS - DO NOT MODIFY
+
+  https://coolors.co/palette/6b9080-a4c3b2-cce3de-eaf4f4-f6fff8
+
+*/
+
+body {
+  color: #3c544a;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cce3de;
+}
+
+header h2 {
+  padding: 2rem;
+  margin-bottom: 50px;
+  background-color: black;
+  color: #eaf4f4;
+  text-align: center;
+  font-size: 3rem;
+
+  background-color: #577769;
+}
+
+main {
+  padding: 0 1.3rem 5rem 1.3rem;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+main section {
+  margin-bottom: 4rem;
+}
+
+.wrapper {
+  border: 2px solid #3c544a;
+  background-color: #f6fff8;
+  padding: 30px 20px;
+}
+
+/* Remove the list style type from the ul's */
+.wrapper ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+/****** Screen reader text utility clsas *******/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

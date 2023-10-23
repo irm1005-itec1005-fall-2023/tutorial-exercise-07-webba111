@@ -1,0 +1,269 @@
+/*
+
+TASK 1
+
+*/
+
+.grid-container-task-1 {
+  display: grid;
+
+  /* Use grid-template-columns to set four equal width columns */
+  /* Experiment with both the repeat() notation and writing out the full column definition */
+
+  /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
+}
+
+/*
+
+  TASK 2
+
+  */
+
+.grid-container-task-2 {
+  display: grid;
+
+  /* Use grid-template-columns to set four equal width columns */
+
+  /* Use grid-template-rows to set two rows each with an equal height */
+
+  /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
+}
+
+.grid-container-task-2 .item-1 {
+  /* Add a grid-row-start to have this item start at the top most row line */
+
+  /*
+    Add a grid-row-end to have the item start at the last row line
+    HINT: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-row-end
+  */
+}
+
+.grid-container-task-2 .item-2 {
+  /* Use grid-columnd-start to start at the 3rd column line */
+
+  /*
+    Use grid-column-end to end at the last column line
+    HINT: Find out what "-1" does
+  */
+
+  /* Use grid-row-start to start at the 2nd row line */
+}
+
+/*
+
+    TASK 3
+
+  */
+
+.grid-container-task-3 {
+  display: grid;
+
+  /* Use grid-template-columns to set four equal width columns */
+
+  /* Use grid-template-rows to set four rows each with an equal height */
+
+  /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
+}
+
+.grid-container-task-3 .item-1 {
+  /* grid-column-start at line 1 */
+
+  /* grid-column-end at line 4 */
+}
+
+.grid-container-task-3 .item-2 {
+  /* grid-column-start at line 4 */
+
+  /* grid-row-start at line 1 */
+
+  /* grid-row-end at the last row line */
+}
+
+.grid-container-task-3 .item-3 {
+  /* that's enough hints for now */
+}
+
+.grid-container-task-3 .item-4 {
+  /* You totally got this */
+}
+
+.grid-container-task-3 .item-5 {
+  /* Easy as pie */
+}
+
+/*
+
+    TASK 4
+
+  */
+
+.grid-container-task-4 {
+  display: grid;
+
+  /* The grid-template-columns is set two small bits of patting on either side and four equal width columns in the middle  */
+  grid-template-columns: 2rem 1fr 1fr 1fr 1fr 2rem;
+
+  /* The grid-template-rows to set have three equal height rows */
+  grid-template-rows: repeat(3, 1fr);
+
+   /* Set the gap to 2rem to add spacing around each grid item in the contaiern */
+   gap: 2rem;
+
+  /*
+    Use grid-template-areas to name the different sections
+
+    We know from our grid-template-columns decleration above
+    that we have 6 columns and 3 rows in total
+
+    So we need to figure out the areas for those different spaces
+
+    A A A A A A  (This sets up an area called "A" that spans across 6 rows)
+    . . . C D .  (This setups up a bunch of blank areas "." and then two areas, one called C and one called D)
+    B B B B B B  (This sets up an area called "B" that spans across 6 rows)
+
+    Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+
+  */
+
+  /* Fill in here */
+
+}
+
+.grid-container-task-4 .header {
+  grid-area: header;
+}
+
+.grid-container-task-4 .main {
+  grid-area: main;
+}
+
+.grid-container-task-4 .side {
+  grid-area: side;
+}
+
+.grid-container-task-4 .footer {
+  grid-area: footer;
+}
+
+/*
+
+    TASK 5
+
+  */
+
+.grid-container-task-5 {
+  display: grid;
+
+  /* Use grid-template-columns to set eight 8 equal width columns */
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.grid-container-task-5 .item-1 {
+  /* Fill in here */
+}
+
+.grid-container-task-5 .item-2 {
+  /* Fill in here */
+}
+
+.grid-container-task-5 .item-3 {
+  /* Fill in here */
+}
+
+.grid-container-task-5 .item-4 {
+  /* Fill in here */
+}
+
+.grid-container-task-5 .item-5 {
+  /* Fill in here */
+}
+
+.grid-container-task-5 .item-6 {
+  /* Fill in here */
+}
+
+.grid-container-task-5 .item-7 {
+  /* Fill in here */
+}
+
+.grid-container-task-5 .item-8 {
+  /* Fill in here */
+}
+
+/*
+  AUXILARY CSS FOR THE GRID CONTAINERS AND CHILDREN - DO NOT MODIFY
+*/
+
+.grid-container-task-1 > li,
+.grid-container-task-2 > li,
+.grid-container-task-3 > li,
+.grid-container-task-4 > li,
+.grid-container-task-5 > li {
+  padding: 20px;
+  background-color: #cce3de;
+  border: 2px solid #577769;
+}
+
+/*
+  CORE PAGE CSS - DO NOT MODIFY
+
+  https://coolors.co/palette/6b9080-a4c3b2-cce3de-eaf4f4-f6fff8
+
+*/
+
+body {
+  color: #3c544a;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #cce3de;
+}
+
+header h2 {
+  padding: 2rem;
+  margin-bottom: 50px;
+  background-color: black;
+  color: #eaf4f4;
+  text-align: center;
+  font-size: 3rem;
+
+  background-color: #577769;
+}
+
+main {
+  margin: 0 1.3rem 5rem 1.3rem;
+}
+
+main h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+main section {
+  margin-bottom: 4rem;
+}
+
+.wrapper {
+  border: 2px solid #3c544a;
+  background-color: #f6fff8;
+  padding: 30px 20px;
+  min-width: 100%;
+}
+
+/* Remove the list style type from the ul's */
+.wrapper ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+/****** Screen reader text utility clsas *******/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
